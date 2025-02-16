@@ -1,6 +1,6 @@
 package P1;
 import java.util.Scanner;
-public class P1_Percobaan1 {
+public class pemilihan20 {
 public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     double nilaiakhir, nilaitugas, nilaikuis, nilaiuts,nilaiuas;
