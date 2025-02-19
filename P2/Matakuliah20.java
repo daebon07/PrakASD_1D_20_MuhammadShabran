@@ -7,6 +7,7 @@ public class Matakuliah20 {
     int sks;
     int jmlhJam;
 
+    
     public Matakuliah20() {
        
     }

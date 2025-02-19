@@ -5,6 +5,7 @@ public class MatakuliahMain20 {
         Matakuliah20 Matkul1 = new Matakuliah20();
         Matkul1.tampilkanInformasi();
 
+        
         Matakuliah20 Matkul2 = new Matakuliah20("ALSD_TI", "Algoritma dan Struktur Data", 2, 4);
         Matkul2.tampilkanInformasi();
 
