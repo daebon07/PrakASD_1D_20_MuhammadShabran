@@ -29,5 +29,12 @@ public class Matakuliah20 {
         this.jumlahjam = Integer.parseInt(sc.nextLine());
         System.out.println("------------------------------");
     }
-    
+    public void cetakInfo(){
+        System.out.println("Kode        : " + kode);
+        System.out.println("Nama        : " + nama);
+        System.out.println("Sks         : " + sks);
+        System.out.println("Jumlah Jam  : " + jumlahjam);
+        System.out.println("------------------------------");
+
+    }
 }
