@@ -9,13 +9,17 @@ public class Matakuliahdemo20 {
         String kode, nama, dummy;
         int sks, jumlahJam;
 
-        for (int i = 0; i < 3; i++) {
+        System.out.print("Masukkan jumlah matakuliah: ");
+        int jumlahMatakuliah = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < jumlahMatakuliah; i++) {
             System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
             arrayOfMatakuliah20[i] = new Matakuliah20();
             arrayOfMatakuliah20[i].tambahData();
         }
 
-        for(int i=0; i < 3; i++) {
+        for(int i=0; i < jumlahMatakuliah; i++) {
             System.out.println("Data Matakuliah ke-" + (i + 1));
             arrayOfMatakuliah20[i].cetakInfo();
             
