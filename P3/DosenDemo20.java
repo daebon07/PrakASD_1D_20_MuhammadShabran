@@ -12,6 +12,7 @@ public class DosenDemo20 {
 
         Dosen20[] daftarDosen = new Dosen20[jumlahDosen];
 
+
         for (int i = 0; i < jumlahDosen; i++) {
             System.out.println("\nMasukkan Data Dosen ke-" + (i + 1));
 
@@ -29,15 +30,15 @@ public class DosenDemo20 {
             int usia = sc.nextInt();
             sc.nextLine(); 
 
-            
             daftarDosen[i] = new Dosen20(kode, nama, jenisKelamin, usia);
             System.out.println("------------------------------");
         }
 
-        System.out.println("\nData Dosen yang telah dimasukkan:");
-        for (Dosen20 dosen : daftarDosen) {
-            dosen.display();
-        }
+        DataDosen20.dataSemuaDosen(daftarDosen);
+        DataDosen20.jumlahDosenPerJenisKelamin(daftarDosen);
+        DataDosen20.rerataUsiaDosenPerJenisKelamin(daftarDosen);
+        DataDosen20.infoDosenPalingTua(daftarDosen);
+        DataDosen20.infoDosenPalingMuda(daftarDosen);
 
         sc.close();
     }
