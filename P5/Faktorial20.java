@@ -2,10 +2,12 @@ package P5;
 public class Faktorial20 {
     int faktorialBF (int n){
         int fakto = 1;
-        for(int i=1; i<= n; i++){
-            fakto = fakto * i;
-        }
-        return fakto;
+    int i = 1;
+    do {
+        fakto = fakto * i;
+        i++;
+    } while(i <= n);
+    return fakto;
     }
 
     int faktorialDc(int n){
