@@ -1,42 +1,49 @@
 package P6;
 
 public class MahasiswaBerprestasi20 {
-    Mahasiswa20[] listmhs;
+    Mahasiswa20 [] listmhs= new Mahasiswa20[5];
     int idx;
 
-    // Konstruktor baru untuk ukuran dinamis
-    public MahasiswaBerprestasi20(int jumlah) {
-        listmhs = new Mahasiswa20[jumlah];
-        idx = 0;
-    }
-
-    void tambah(Mahasiswa20 m) {
-        if (idx < listmhs.length) {
-            listmhs[idx] = m;
+    void tambah (Mahasiswa20 m){
+        if (idx<listmhs.length){
+            listmhs[idx]=m;
             idx++;
-        } else {
-            System.out.println("Data sudah penuh");
+    }else{
+        System.out.println("data sudah penuh");
+    }
+    }
+    void tampil(){
+        for (Mahasiswa20 m:listmhs){
+            m.tampilInformasi();
+            System.out.println("-------------------------------");
         }
     }
 
-    void tampil() {
-        for (Mahasiswa20 m : listmhs) {
-            if (m != null) {
-                m.tampilInformasi();
-                System.out.println("----------------------------");
-            }
-        }
-    }
-
-    void bubblesort() {
-        for (int i = 0; i < listmhs.length - 1; i++) {
-            for (int j = 1; j < listmhs.length - i; j++) {
-                if (listmhs[j].ipk > listmhs[j - 1].ipk) {
+    void bubblesort(){
+        for (int i=0; i<listmhs.length-1; i++){
+            for (int j=1; j<listmhs.length-i;j++){
+                if(listmhs[j].ipk>listmhs[j-1].ipk){
                     Mahasiswa20 tmp = listmhs[j];
-                    listmhs[j] = listmhs[j - 1];
-                    listmhs[j - 1] = tmp;
+                    listmhs[j]= listmhs[j-1];
+                    listmhs[j-1] = tmp;
                 }
             }
         }
     }
+
+    void selectionSort() {
+        for (int i = 0; i < listmhs.length - 1; i++) {
+            int idxMin = i;
+            for (int j = i + 1; j < listmhs.length; j++) {
+                if (listmhs[j].ipk < listmhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            Mahasiswa20 tmp = listmhs[idxMin];
+            listmhs[idxMin] = listmhs[i];
+            listmhs[i] = tmp;
+        }
+    }
+
+
 }
