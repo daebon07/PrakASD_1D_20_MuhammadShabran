@@ -1,26 +1,37 @@
 package P6;
-
+import java.util.Scanner;
 public class MahasiswaDemo20 {
     public static void main(String[] args) {
-        MahasiswaBerprestasi20 list = new MahasiswaBerprestasi20();
-    
-        Mahasiswa20 m1 = new Mahasiswa20("123", "Zidan", "2A", 3.2);
-        Mahasiswa20 m2 = new Mahasiswa20("124", "Ayu", "2A", 3.5);
-        Mahasiswa20 m3 = new Mahasiswa20("125", "Sofi", "2A", 3.1);
-        Mahasiswa20 m4 = new Mahasiswa20("126", "Sita", "2A", 3.9);
-        Mahasiswa20 m5 = new Mahasiswa20("127", "Miki", "2A", 3.7);
-    
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
-    
-        System.out.println("Data mahasiswa sebelum sorting: ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = scanner.nextInt();
+        scanner.nextLine(); // Membuang newline
+
+        MahasiswaBerprestasi20 list = new MahasiswaBerprestasi20 (jumlah);
+
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Masukkan data mahasiswa ke-" + (i + 1) + ":");
+            System.out.print("NIM: ");
+            String nim = scanner.nextLine();
+            System.out.print("Nama: ");
+            String nama = scanner.nextLine();
+            System.out.print("Kelas: ");
+            String kelas = scanner.nextLine();
+            System.out.print("IPK: ");
+            double ipk = scanner.nextDouble();
+            scanner.nextLine(); // Membuang newline
+
+            Mahasiswa20 m = new Mahasiswa20(nim, nama, kelas, ipk);
+            list.tambah(m);
+        }
+
+        System.out.println("\nData mahasiswa sebelum sorting:");
         list.tampil();
-    
-        System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK (DESC): ");
+
+        System.out.println("\nData mahasiswa setelah sorting berdasarkan IPK (DESC):");
         list.bubblesort();
         list.tampil();
+
+        scanner.close();
     }
 }
