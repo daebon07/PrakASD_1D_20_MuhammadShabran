@@ -36,6 +36,24 @@ public class MahasiswaBerprestasi20 {
         }
     }
 
+    int findBinarySearch(double cari, int left, int right){
+        int mid;
+        if (right >= left){
+            mid = (left + right) / 2;
+            if (cari == listmhs[mid].ipk){
+                return mid;
+            }
+            else if (listmhs[mid].ipk > cari){
+                return findBinarySearch(cari, left, mid - 1);
+            }
+            else{
+                return findBinarySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
+    }
+    
+
 
     void tambah (Mahasiswa20 m){
         if (idx<listmhs.length){
