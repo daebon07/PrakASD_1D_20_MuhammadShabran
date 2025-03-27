@@ -4,6 +4,39 @@ public class MahasiswaBerprestasi20 {
     Mahasiswa20 [] listmhs= new Mahasiswa20[5];
     int idx;
 
+    int sequentialSearching(double cari){
+        int posisi = -1;
+        for (int j = 0; j < listmhs.length; j++){
+            if (listmhs[j].ipk == cari){
+                posisi = j;
+                break;
+            }
+        }
+        return posisi;
+    }
+
+    void tampilPosisi(double x, int pos){
+        if (pos != -1){
+            System.out.println("data mahasiswa dengan IPK :" + x + " ditemukan pada indeks " + pos);
+        }
+        else {
+            System.out.println("data " + x + " tidak ditemukan");
+        }
+    }
+
+    void tampilDataSearch(double x, int pos){
+        if (pos != -1){
+            System.out.println("nim\t : " + listmhs[pos].nim);
+            System.out.println("nama\t : " + listmhs[pos].nama);
+            System.out.println("kelas\t : " + listmhs[pos].kelas);
+            System.out.println("ipk\t : " + x);
+        }
+        else {
+            System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
+        }
+    }
+
+
     void tambah (Mahasiswa20 m){
         if (idx<listmhs.length){
             listmhs[idx]=m;
@@ -56,7 +89,8 @@ public class MahasiswaBerprestasi20 {
             listmhs[j] = temp;
         }
     
-
+    
+    
 
 }
 }
