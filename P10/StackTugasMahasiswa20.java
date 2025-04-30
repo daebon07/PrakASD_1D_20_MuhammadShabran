@@ -10,6 +10,19 @@ public StackTugasMahasiswa20(int size){
     stack = new Mahasiswa20 [size];
     top = -1;
 }
+public String konversiDesimalKeBiner20(int nilai) {
+    Stackkonversi20 stack = new Stackkonversi20();
+    while (nilai > 0) {
+        int sisa = nilai % 2;
+        stack.push20(sisa);
+        nilai = nilai / 2;
+    }
+    String biner = new String();
+    while (!stack.isEmpty20()) {
+        biner += stack.pop20();
+    }
+    return biner;
+}
 
 public boolean isFull20(){
     if (top == size -1){
@@ -70,4 +83,5 @@ public int jumlahTugas20() {
     } 
     System.out.println( " ");
  }
+
 }
