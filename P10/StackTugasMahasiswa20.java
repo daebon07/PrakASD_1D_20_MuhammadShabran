@@ -54,7 +54,7 @@ public Mahasiswa20 peek20() {
     }
  }
  public void print20 (){
-    for (int i = 0; i <= top; i++){
+    for (int i = top; i >= 0; i--){
         System.out.println(stack[i].nama + "\t" + stack [i].nim + "\t" + stack[i].kelas);
     } 
     System.out.println( " ");
