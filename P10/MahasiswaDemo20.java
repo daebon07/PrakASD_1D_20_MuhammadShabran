@@ -13,6 +13,7 @@ public class MahasiswaDemo20 {
             System.out.println("2. Menilai Tugas");
             System.out.println("3. Melihat Tugas Teratas");
             System.out.println("4. Melihat Daftar Tugas");
+            System.out.println("5. Melihat Mahasiswa yang pertama kali mengumpulkan");
             System.out.print("pilih: ");
             pilih = scan.nextInt();
             scan.nextLine();
@@ -22,7 +23,7 @@ public class MahasiswaDemo20 {
                 String nama = scan.nextLine();
                 System.out.print("NIM: ");
                 String nim = scan.nextLine();
-                System.out.print("Nama: ");
+                System.out.print("Kelas: ");
                 String kelas = scan.nextLine();
                 Mahasiswa20 mhs = new Mahasiswa20 (nama, nim, kelas);
                 stack.push20(mhs);
@@ -49,9 +50,15 @@ public class MahasiswaDemo20 {
                 System.out.println(" Nama\tNIM\tKelas");
                 stack.print20();
                 break;
+            case 5:
+                Mahasiswa20 bawah = stack.peekbottom20();
+                if (bawah != null) {
+                    System.out.println("Tugas pertama dikumpulkan oleh " + bawah.nama);
+                }
+                break;
             default :
                 System.out.println("pilihan tidak valid");
             }
-        } while (pilih >= 1 && pilih <= 4);
+        } while (pilih >= 1 && pilih <= 5);
     }
 }
