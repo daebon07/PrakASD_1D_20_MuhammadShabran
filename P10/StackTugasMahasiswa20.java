@@ -61,6 +61,9 @@ public Mahasiswa20 peek20() {
         return null;
     }
 }
+public int jumlahTugas20() {
+    return top + 1;
+}
  public void print20 (){
     for (int i = top; i >= 0; i--){
         System.out.println(stack[i].nama + "\t" + stack [i].nim + "\t" + stack[i].kelas);
