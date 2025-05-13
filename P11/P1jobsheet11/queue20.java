@@ -58,39 +58,41 @@ public class queue20 {
         }
     }
     public void Enqueue20(int dt){
-        if (Isfull20()) {
-            System.out.println("Queue sudah penuhh");
-        }else{
-            if (IsEmpty20()){
-                front = rear = 0;
-            }else{
-                if (rear == max - 1){
-                    rear = 0;
-                }else{
-                    rear++;
+            if (Isfull20()) {
+                System.out.println("Queue sudah penuh");
+                System.exit(1); 
+            } else {
+                if (IsEmpty20()) {
+                    front = rear = 0;
+                } else {
+                    if (rear == max - 1) {
+                        rear = 0;
+                    } else {
+                        rear++;
+                    }
                 }
+                data[rear] = dt;
+                size++;
             }
-            data[rear]=dt;
-            size++;
-        }
-
     }
     public int Dequeue20(){
         int dt = 0;
-        if (IsEmpty20()){
-        }else{
-            dt = data[front];
-            size--;
-            if(IsEmpty20()){
-                front= rear = -1;
-            }else{
-                if (front == max -1){
-                    front = 0;
-                }else{
-                    front++;
-                }
+    if (IsEmpty20()) {
+        System.out.println("Queue masih kosong");
+        System.exit(1);
+    } else {
+        dt = data[front];
+        size--;
+        if (IsEmpty20()) {
+            front = rear = -1;
+        } else {
+            if (front == max - 1) {
+                front = 0;
+            } else {
+                front++;
             }
         }
-        return dt;
+    }
+    return dt;
     }
 }
