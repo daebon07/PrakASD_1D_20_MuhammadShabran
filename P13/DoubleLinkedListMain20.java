@@ -38,5 +38,21 @@ public class DoubleLinkedListMain20 {
     dll.remove20(1);
     dll.print20();
     System.out.println("Size : "+dll.size20());
-        }
+    dll.print20();
+    System.out.println("Size: " + dll.size20());
+    System.out.println("===============================");
+    dll.addFirst20(3);
+    dll.addLast20(4);
+    dll.addFirst20(7);
+    dll.print20();
+    System.out.println("Size: " + dll.size20());
+    System.out.println("===============================");
+    dll.add20(40, 1);
+    dll.print20();
+    System.out.println("Size: " + dll.size20());
+    System.out.println("===============================");
+    System.out.println("Data awal pada Linked Lists adalah: " + dll.getFirst20());
+    System.out.println("Data akhir pada Linked Lists adalah: " + dll.getLast20());
+    System.out.println("Data index ke-1 pada Linked Lists adalah: " + dll.get20(1));
+    }
 }
