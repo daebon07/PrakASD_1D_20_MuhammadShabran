@@ -20,5 +20,23 @@ public class DoubleLinkedListMain20 {
     dll.clear20();
     dll.print20();
     System.out.println("Size: " +dll.size20());
-    }
+    dll.addLast20(50);
+    dll.addLast20(40);
+    dll.addLast20(10);
+    dll.addLast20(20);
+    dll.print20();
+    System.out.println("Size : "+dll.size20());
+    System.out.println("===============================");
+    dll.removeFirst20();
+    dll.print20();
+    System.out.println("Size : "+dll.size20());
+    System.out.println("===============================");
+    dll.removeLast20();
+    dll.print20();
+    System.out.println("Size : "+dll.size20());
+    System.out.println("===============================");
+    dll.remove20(1);
+    dll.print20();
+    System.out.println("Size : "+dll.size20());
+        }
 }
